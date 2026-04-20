@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feltrin Máquinas & Transportes | Campo Grande, MS</title>
+<meta name="description" content="100 máquinas próprias. Supressão, calcário, terraplanagem e infraestrutura rural. MS, GO, MT e SP. 47 anos de seriedade no agro.">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Feltrin Máquinas & Transportes">
+<meta property="og:description" content="100 máquinas próprias. Supressão, calcário, terraplanagem. MS, GO, MT e SP.">
+<meta property="og:locale" content="pt_BR">
+<link rel="canonical" href="https://www.feltrinmaquinas.com.br/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Feltrin Máquinas & Transportes","description":"Supressão, distribuição de calcário, terraplanagem e infraestrutura rural com 100 máquinas próprias. 47 anos de atuação no Centro-Oeste.","url":"https://www.feltrinmaquinas.com.br","address":{"@type":"PostalAddress","addressLocality":"Campo Grande","addressRegion":"MS","addressCountry":"BR"},"areaServed":["Mato Grosso do Sul","Goiás","Mato Grosso","São Paulo"],"foundingDate":"1979"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%231A2B56'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-family='sans-serif' font-weight='900' font-size='52' fill='%23fff'%3EF%3C/text%3E%3C/svg%3E">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --blue: #1A2B56; --blue-mid: #223570;
+  --red: #C8292A;
+  --gray: #6b7280; --gray-light: #f5f6f8;
+  --border: #e8eaed;
+  --font: 'Montserrat', sans-serif;
+  --radius: 12px;
+  --ease: cubic-bezier(.16,1,.3,1);
+}
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body { font-family: var(--font); background: #fff; color: var(--blue); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; }
+img, video { display: block; max-width: 100%; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 28px; }
+.r { opacity: 0; transform: translateY(20px); transition: opacity .65s var(--ease), transform .65s var(--ease); }
+.r.on { opacity: 1; transform: translateY(0); }
+
+/* ══ HEADER ══ */
+#hd {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,.96); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid transparent; transition: border-color .3s, box-shadow .3s;
+}
+#hd.scrolled { border-bottom-color: var(--border); box-shadow: 0 2px 20px rgba(26,43,86,.06); }
+.hd-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  max-width: 1100px; margin: 0 auto; padding: 0 28px; height: 68px;
+}
+/* Logo: fundo azul para compensar PNG com fundo preto */
+.hd-logo {
+  display: flex; align-items: center;
+  background: var(--blue); border-radius: 8px;
+  padding: 6px 14px; transition: opacity .2s;
+}
+.hd-logo:hover { opacity: .88; }
+.hd-logo img { height: 36px; width: auto; display: block; }
+.hd-nav { display: none; list-style: none; }
+.hd-nav a {
+  font-size: 11.5px; font-weight: 600; letter-spacing: .07em;
+  text-transform: uppercase; color: var(--gray);
+  padding: 7px 13px; border-radius: 8px; transition: color .2s, background .2s;
+}
+.hd-nav a:hover, .hd-nav a.on { color: var(--blue); background: rgba(26,43,86,.05); }
+.hd-actions { display: flex; align-items: center; gap: 10px; }
+/* Instagram no header — SVG inline, sem dependência do Lucide */
+.hd-ig {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 9px;
+  border: 1.5px solid var(--border); color: var(--gray);
+  transition: border-color .2s, color .2s, background .2s;
+}
+.hd-ig:hover { border-color: var(--blue); color: var(--blue); background: rgba(26,43,86,.04); }
+.hd-ig svg { width: 17px; height: 17px; }
+.hd-cta {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: var(--red); color: #fff;
+  font-size: 12px; font-weight: 700; letter-spacing: .04em;
+  padding: 10px 20px; border-radius: 100px; transition: background .2s, transform .2s;
+}
+.hd-cta:hover { background: #b02020; transform: translateY(-1px); }
+.hd-cta svg { width: 14px; height: 14px; }
+.burger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+.burger span { display: block; width: 20px; height: 2px; background: var(--blue); border-radius: 2px; transition: .3s; }
+.burger.on span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger.on span:nth-child(2) { opacity: 0; }
+.burger.on span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mob-menu {
+  position: fixed; inset: 0; background: #fff; z-index: 99;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 4px; opacity: 0; pointer-events: none; transition: opacity .25s;
+}
+.mob-menu.on { opacity: 1; pointer-events: all; }
+.mob-menu a { font-size: 22px; font-weight: 800; color: var(--blue); padding: 11px 32px; text-transform: uppercase; letter-spacing: .06em; transition: color .2s; }
+.mob-menu a:hover { color: var(--red); }
+.mob-ig-row {
+  display: flex; align-items: center; gap: 8px; margin-top: 12px;
+  font-size: 14px; font-weight: 700; color: var(--gray);
+}
+.mob-ig-row svg { width: 16px; height: 16px; }
+@media (min-width: 860px) { .hd-nav { display: flex; } .burger { display: none; } }
+
+/* ══ HERO ══ */
+#hero { min-height: 100vh; display: flex; align-items: center; padding: 120px 0 80px; background: #fff; position: relative; overflow: hidden; }
+#hero::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(26,43,86,.04) 1px,transparent 1px), linear-gradient(90deg,rgba(26,43,86,.04) 1px,transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 90% 90% at 50% 40%,black 0%,transparent 75%);
+}
+.hero-inner {
+  position: relative; display: grid;
+  grid-template-columns: 1fr; gap: 48px; align-items: center;
+}
+@media (min-width: 860px) { .hero-inner { grid-template-columns: 1.05fr .95fr; gap: 64px; } }
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--red); border: 1.5px solid rgba(200,41,42,.22);
+  padding: 6px 14px; border-radius: 100px; margin-bottom: 24px;
+  opacity: 0; animation: fadeUp .6s .1s var(--ease) both;
+}
+.hero-tag svg { width: 12px; height: 12px; }
+.hero-h1 {
+  font-size: clamp(36px, 5.5vw, 64px); font-weight: 900; line-height: 1.05; letter-spacing: -.03em;
+  color: var(--blue); margin-bottom: 22px;
+  opacity: 0; animation: fadeUp .7s .22s var(--ease) both;
+}
+.hero-h1 span { color: var(--red); }
+.hero-sub {
+  font-size: clamp(14px, 1.5vw, 16px); font-weight: 400;
+  color: var(--gray); line-height: 1.8; max-width: 440px; margin-bottom: 36px;
+  opacity: 0; animation: fadeUp .7s .36s var(--ease) both;
+}
+.hero-btns { display: flex; flex-wrap: wrap; gap: 12px; opacity: 0; animation: fadeUp .7s .48s var(--ease) both; }
+.btn-red {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--red); color: #fff; font-family: var(--font); font-weight: 700; font-size: 14px;
+  padding: 14px 28px; border-radius: 100px; border: none; cursor: pointer;
+  transition: background .2s, transform .2s, box-shadow .2s;
+}
+.btn-red:hover { background: #b02020; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,41,42,.2); }
+.btn-red svg { width: 15px; height: 15px; }
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: var(--blue); font-family: var(--font); font-weight: 600; font-size: 14px;
+  padding: 13px 24px; border-radius: 100px; border: 1.5px solid var(--border); cursor: pointer;
+  transition: border-color .2s, background .2s;
+}
+.btn-ghost:hover { border-color: var(--blue); background: rgba(26,43,86,.04); }
+.btn-ghost svg { width: 14px; height: 14px; }
+.hero-stats {
+  display: flex; gap: 36px; flex-wrap: wrap;
+  padding-top: 32px; margin-top: 32px; border-top: 1px solid var(--border);
+  opacity: 0; animation: fadeUp .7s .6s var(--ease) both;
+}
+.hero-stat-n { font-size: 30px; font-weight: 900; letter-spacing: -.03em; line-height: 1; color: var(--blue); }
+.hero-stat-l { font-size: 10.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--gray); margin-top: 4px; }
+/* Hero visual */
+.hero-visual { opacity: 0; animation: fadeIn .9s .3s var(--ease) both; }
+.hero-img-wrap {
+  border-radius: 18px; overflow: hidden; position: relative;
+  box-shadow: 0 28px 72px rgba(26,43,86,.14), 0 8px 20px rgba(26,43,86,.07);
+  aspect-ratio: 4/3;
+}
+.hero-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+.hero-img-wrap:hover img { transform: scale(1.03); }
+.hero-badge {
+  position: absolute; bottom: 18px; left: 18px;
+  background: rgba(255,255,255,.95); backdrop-filter: blur(8px);
+  border: 1px solid var(--border); border-radius: 12px;
+  padding: 11px 15px; display: flex; align-items: center; gap: 10px;
+  box-shadow: 0 6px 20px rgba(26,43,86,.1);
+}
+.hero-badge-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; flex-shrink: 0; animation: pulse 2.2s ease infinite; }
+.hero-badge-text { font-size: 12px; font-weight: 800; color: var(--blue); }
+.hero-badge-sub { font-size: 10px; font-weight: 500; color: var(--gray); }
+@keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.4)} 50%{box-shadow:0 0 0 6px rgba(34,197,94,0)} }
+
+/* ══ MARQUEE ══ */
+.marquee-wrap { padding: 13px 0; background: var(--blue); overflow: hidden; }
+.marquee-track { display: flex; width: max-content; animation: scroll 36s linear infinite; }
+.marquee-track:hover { animation-play-state: paused; }
+.m-item { display: flex; align-items: center; gap: 10px; padding: 0 24px; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.6); white-space: nowrap; }
+.m-dot { width: 3px; height: 3px; background: var(--red); border-radius: 50%; }
+
+/* ══ SERVIÇOS ══ */
+#servicos { padding: 100px 0; background: var(--gray-light); }
+.sec-label { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--red); margin-bottom: 12px; }
+.sec-h2 { font-size: clamp(26px,4vw,42px); font-weight: 900; letter-spacing: -.03em; line-height: 1.1; color: var(--blue); margin-bottom: 14px; }
+.sec-p { font-size: 15px; color: var(--gray); line-height: 1.75; max-width: 480px; }
+.servicos-header { margin-bottom: 48px; }
+.servicos-grid {
+  display: grid; grid-template-columns: repeat(2,1fr);
+  gap: 1px; background: var(--border);
+  border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;
+}
+@media (min-width: 560px) { .servicos-grid { grid-template-columns: repeat(3,1fr); } }
+@media (min-width: 900px) { .servicos-grid { grid-template-columns: repeat(4,1fr); } }
+.srv { background: #fff; padding: 26px 20px; transition: background .2s; }
+.srv:hover { background: #fafbff; }
+.srv-top { display: flex; align-items: center; gap: 10px; margin-bottom: 9px; }
+.srv-icon { width: 34px; height: 34px; border-radius: 9px; background: rgba(26,43,86,.06); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.srv-icon svg { width: 15px; height: 15px; color: var(--blue); }
+.srv-name { font-size: 13px; font-weight: 800; color: var(--blue); line-height: 1.3; }
+.srv-desc { font-size: 11.5px; color: var(--gray); line-height: 1.6; }
+.srv.destaque { border-left: 3px solid var(--red); }
+.srv.destaque .srv-name { color: var(--red); }
+
+/* ══ GALERIA DA FROTA ══ */
+#frota { padding: 100px 0; background: #fff; }
+.frota-header { margin-bottom: 48px; }
+
+/* Layout editorial: 5 imagens */
+.frota-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+/* Mobile: empilhadas */
+.frota-grid .fi { border-radius: 12px; overflow: hidden; position: relative; background: var(--gray-light); }
+.frota-grid .fi img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s var(--ease); }
+.frota-grid .fi:hover img { transform: scale(1.04); }
+.frota-grid .fi-1 { aspect-ratio: 3/4; }
+.frota-grid .fi-2 { aspect-ratio: 4/3; }
+.frota-grid .fi-3 { aspect-ratio: 4/3; }
+.frota-grid .fi-4 { aspect-ratio: 4/3; }
+.frota-grid .fi-5 { aspect-ratio: 4/3; grid-column: span 2; }
+
+/* Desktop: layout editorial 3 colunas */
+@media (min-width: 768px) {
+  .frota-grid {
+    grid-template-columns: 1.1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .frota-grid .fi-1 { grid-row: span 2; aspect-ratio: unset; } /* grande esquerda */
+  .frota-grid .fi-2 { aspect-ratio: unset; }
+  .frota-grid .fi-3 { aspect-ratio: unset; }
+  .frota-grid .fi-4 { aspect-ratio: unset; }
+  .frota-grid .fi-5 { grid-column: span 1; aspect-ratio: unset; }
+}
+
+.frota-nums {
+  display: flex; gap: 48px; flex-wrap: wrap;
+  margin-top: 52px; padding-top: 40px; border-top: 1px solid var(--border);
+}
+.fn-block .fn { font-size: 44px; font-weight: 900; letter-spacing: -.04em; color: var(--blue); line-height: 1; }
+.fn-block .fn.red { color: var(--red); }
+.fn-block .fl { font-size: 13px; font-weight: 700; color: var(--blue); margin-top: 6px; }
+.fn-block .fd { font-size: 12px; color: var(--gray); margin-top: 2px; }
+
+/* ══ POR QUE FELTRIN ══ */
+#porque { padding: 100px 0; background: var(--blue); }
+#porque .sec-label { color: rgba(255,255,255,.45); }
+#porque .sec-h2 { color: #fff; margin-bottom: 56px; max-width: 560px; }
+.pq-grid { display: grid; grid-template-columns: 1fr; gap: 48px; }
+@media (min-width: 700px) { .pq-grid { grid-template-columns: repeat(3,1fr); gap: 0; } }
+.pq-item { padding: 0 36px; }
+@media (min-width: 700px) {
+  .pq-item { border-right: 1px solid rgba(255,255,255,.1); }
+  .pq-item:first-child { padding-left: 0; }
+  .pq-item:last-child { border-right: none; }
+}
+.pq-n { font-size: 56px; font-weight: 900; letter-spacing: -.05em; line-height: 1; color: #fff; margin-bottom: 16px; }
+.pq-n sub { font-size: 28px; font-weight: 700; vertical-align: baseline; letter-spacing: 0; }
+.pq-n.red { color: var(--red); }
+.pq-h { font-size: 16px; font-weight: 800; color: #fff; margin-bottom: 10px; }
+.pq-p { font-size: 13px; color: rgba(255,255,255,.5); line-height: 1.75; }
+
+/* ══ CONTATO ══ */
+#contato { padding: 100px 0; background: #fff; }
+.contato-inner { display: grid; grid-template-columns: 1fr; gap: 64px; align-items: start; }
+@media (min-width: 860px) { .contato-inner { grid-template-columns: 1fr 1fr; gap: 80px; } }
+.contato-text .sec-h2 { margin-bottom: 16px; }
+.contato-text .sec-p { margin-bottom: 24px; max-width: 400px; }
+.contato-tagline { font-size: 13px; font-weight: 600; font-style: italic; color: var(--gray); margin-bottom: 28px; line-height: 1.6; border-left: 3px solid var(--red); padding-left: 14px; }
+.wa-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #fff; background: #22c55e; padding: 6px 14px; border-radius: 100px; margin-bottom: 20px; }
+.wa-tag svg { width: 12px; height: 12px; }
+.contato-cards { display: flex; flex-direction: column; gap: 12px; }
+.contato-card {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 18px 20px; border: 1.5px solid var(--border); border-radius: var(--radius);
+  transition: border-color .2s, box-shadow .2s;
+}
+.contato-card:hover { border-color: var(--blue); box-shadow: 0 4px 20px rgba(26,43,86,.07); }
+.contato-card-info { display: flex; align-items: center; gap: 12px; }
+.contato-card-icon { width: 40px; height: 40px; background: rgba(26,43,86,.06); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.contato-card-icon svg { width: 17px; height: 17px; color: var(--blue); }
+.contato-card-name { font-size: 14px; font-weight: 800; color: var(--blue); }
+.contato-card-num { font-size: 12px; color: var(--gray); margin-top: 2px; }
+.contato-card-btn { display: inline-flex; align-items: center; gap: 6px; background: #22c55e; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: .04em; padding: 8px 14px; border-radius: 100px; transition: background .2s; white-space: nowrap; }
+.contato-card-btn:hover { background: #16a34a; }
+.contato-card-btn svg { width: 13px; height: 13px; }
+.contato-aside { display: flex; flex-direction: column; gap: 18px; padding-top: 8px; }
+.contato-info-block { padding: 22px; background: var(--gray-light); border-radius: var(--radius); }
+.contato-info-block h4 { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gray); margin-bottom: 14px; }
+.contato-info-block ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.contato-info-block li { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--blue); font-weight: 600; }
+.contato-info-block li svg { width: 14px; height: 14px; color: var(--gray); flex-shrink: 0; }
+.contato-info-block li.ig-li a { color: var(--blue); font-weight: 700; transition: color .2s; }
+.contato-info-block li.ig-li a:hover { color: var(--red); }
+.safra-alert { background: var(--blue); border-radius: var(--radius); padding: 22px; display: flex; align-items: flex-start; gap: 14px; }
+.safra-alert svg { width: 20px; height: 20px; color: var(--red); flex-shrink: 0; margin-top: 1px; }
+.safra-alert-text h4 { font-size: 13px; font-weight: 800; color: #fff; margin-bottom: 5px; }
+.safra-alert-text p { font-size: 12px; color: rgba(255,255,255,.5); line-height: 1.6; }
+.safra-alert-text a { color: rgba(255,255,255,.8); font-weight: 700; text-decoration: underline; }
+
+/* ══ FOOTER ══ */
+#ft { background: var(--blue); padding: 52px 0 28px; }
+.ft-inner { display: grid; grid-template-columns: 1fr; gap: 40px; margin-bottom: 40px; }
+@media (min-width: 680px) { .ft-inner { grid-template-columns: 2fr 1fr 1fr; } }
+/* Logo no footer: fundo azul já existe, mostramos a img normalmente */
+.ft-brand-logo { display: inline-flex; background: rgba(255,255,255,.1); border-radius: 8px; padding: 6px 14px; }
+.ft-brand-logo img { height: 32px; width: auto; display: block; }
+.ft-brand p { font-size: 13px; color: rgba(255,255,255,.4); line-height: 1.7; max-width: 260px; margin-top: 14px; }
+.ft-estados { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 14px; }
+.ft-estado { font-size: 10px; font-weight: 700; letter-spacing: .1em; color: rgba(255,255,255,.5); background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1); padding: 4px 10px; border-radius: 100px; }
+.ft-col h4 { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.4); margin-bottom: 14px; }
+.ft-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.ft-col ul a { font-size: 13px; color: rgba(255,255,255,.5); transition: color .2s; }
+.ft-col ul a:hover { color: #fff; }
+.ft-bottom { padding-top: 22px; border-top: 1px solid rgba(255,255,255,.07); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+.ft-bottom p, .ft-bottom a { font-size: 11px; color: rgba(255,255,255,.28); }
+.ft-bottom a:hover { color: rgba(255,255,255,.7); }
+
+/* ══ FLOATS ══ */
+.wa-float {
+  position: fixed; bottom: 84px; right: 24px; z-index: 90;
+  width: 50px; height: 50px; background: #25D366; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 16px rgba(37,211,102,.35); transition: transform .2s;
+}
+.wa-float:hover { transform: scale(1.1); }
+.wa-float svg { width: 23px; height: 23px; color: #fff; }
+.ig-float {
+  position: fixed; bottom: 24px; right: 24px; z-index: 90;
+  width: 50px; height: 50px; background: var(--blue); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 16px rgba(26,43,86,.25); transition: transform .2s, background .2s;
+}
+.ig-float:hover { transform: scale(1.1); background: var(--blue-mid); }
+.ig-float svg { width: 21px; height: 21px; color: #fff; }
+
+/* ══ ANIMATIONS ══ */
+@keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+@keyframes fadeIn { from{opacity:0} to{opacity:1} }
+@keyframes scroll { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="hd">
+  <div class="hd-inner">
+    <a href="#" class="hd-logo">
+      <img src="Logo-feltrin/logo-feltrin.png" alt="Feltrin Máquinas & Transportes" height="36">
+    </a>
+    <ul class="hd-nav">
+      <li><a href="#servicos" data-s="servicos">Serviços</a></li>
+      <li><a href="#frota" data-s="frota">Frota</a></li>
+      <li><a href="#porque" data-s="porque">Sobre</a></li>
+      <li><a href="#contato" data-s="contato">Contato</a></li>
+    </ul>
+    <div class="hd-actions">
+      <a href="https://www.instagram.com/feltrinmaquinas/" target="_blank" class="hd-ig" aria-label="Instagram">
+        <!-- Instagram SVG inline — sem dependência do Lucide -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=5567984032211&text=Ol%C3%A1%2C+vim+pelo+site+e+quero+um+or%C3%A7amento!" target="_blank" class="hd-cta">
+        <i data-lucide="phone"></i>Orçamento
+      </a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="mob-menu" id="mobMenu">
+  <a href="#servicos">Serviços</a>
+  <a href="#frota">Frota</a>
+  <a href="#porque">Sobre</a>
+  <a href="#contato">Contato</a>
+  <a href="https://www.instagram.com/feltrinmaquinas/" target="_blank" class="mob-ig-row">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    @feltrinmaquinas
+  </a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-tag"><i data-lucide="map-pin"></i>Campo Grande, MS — há 47 anos</div>
+        <h1 class="hero-h1">Máquina certa.<br>No prazo.<br><span>Sem desculpa.</span></h1>
+        <p class="hero-sub">Supressão, calcário, terraplanagem e muito mais. 100 máquinas próprias, manutenção interna e operadores qualificados. MS, GO, MT e SP.</p>
+        <div class="hero-btns">
+          <a href="https://api.whatsapp.com/send?phone=5567984032211&text=Ol%C3%A1%2C+vim+pelo+site+e+quero+um+or%C3%A7amento!" target="_blank" class="btn-red">
+            <i data-lucide="phone"></i>Solicitar Orçamento
+          </a>
+          <a href="#frota" class="btn-ghost">Ver Frota<i data-lucide="arrow-down"></i></a>
+        </div>
+        <div class="hero-stats">
+          <div><div class="hero-stat-n">47</div><div class="hero-stat-l">Anos no agro</div></div>
+          <div><div class="hero-stat-n">100</div><div class="hero-stat-l">Máquinas próprias</div></div>
+          <div><div class="hero-stat-n">4</div><div class="hero-stat-l">Estados</div></div>
+        </div>
+      </div>
+      <!-- IMG_9550: frota no pátio com galpão — melhor formato landscape para o hero -->
+      <div class="hero-visual">
+        <div class="hero-img-wrap">
+          <img src="frota/IMG_9550.jpg" alt="Frota Feltrin Máquinas no pátio" loading="eager">
+          <div class="hero-badge">
+            <div class="hero-badge-dot"></div>
+            <div>
+              <div class="hero-badge-text">Frota disponível</div>
+              <div class="hero-badge-sub">Safra 2026 · Jun–Dez</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track" id="mTrack"></div>
+</div>
+
+<!-- SERVIÇOS -->
+<section id="servicos">
+  <div class="container">
+    <div class="servicos-header r">
+      <div class="sec-label">Serviços</div>
+      <h2 class="sec-h2">11 serviços. Uma frota.</h2>
+      <p class="sec-p">Do preparo do solo ao apoio à lavoura. Frota própria e equipe especializada em cada etapa.</p>
+    </div>
+    <div class="servicos-grid r" id="sGrid" style="transition-delay:.1s"></div>
+  </div>
+</section>
+
+<!-- GALERIA DA FROTA -->
+<section id="frota">
+  <div class="container">
+    <div class="frota-header r">
+      <div class="sec-label">Nossa Frota</div>
+      <h2 class="sec-h2">100 máquinas próprias.<br>Manutenção interna.</h2>
+      <p class="sec-p">Estrutura que poucos prestadores da região têm. Equipamento disponível quando a janela de plantio abre.</p>
+    </div>
+
+    <!-- Layout editorial 5 imagens -->
+    <div class="frota-grid r" style="transition-delay:.1s">
+      <!-- Grande à esquerda: escavadeira noturna — mais dramática -->
+      <div class="fi fi-1">
+        <img src="frota/IMG_7926.jpg" alt="Escavadeira CAT 320 Feltrin em operação noturna" loading="lazy">
+      </div>
+      <!-- Top direita: fila de escavadeiras no pátio -->
+      <div class="fi fi-2">
+        <img src="frota/IMG_9549.jpg" alt="Frota de escavadeiras CAT Feltrin" loading="lazy">
+      </div>
+      <!-- Mid direita: pás carregadeiras CASE -->
+      <div class="fi fi-3">
+        <img src="frota/IMG_7190.jpg" alt="Pás carregadeiras CASE Feltrin" loading="lazy">
+      </div>
+      <!-- Bottom esquerda: caminhão com marca Feltrin -->
+      <div class="fi fi-4">
+        <img src="frota/IMG_6994.jpg" alt="Caminhão Mercedes-Benz Feltrin com calcário" loading="lazy">
+      </div>
+      <!-- Bottom direita: frota completa no pátio -->
+      <div class="fi fi-5">
+        <img src="frota/IMG_9550.jpg" alt="Pátio Feltrin Máquinas com frota completa" loading="lazy">
+      </div>
+    </div>
+
+    <div class="frota-nums r" style="transition-delay:.2s">
+      <div class="fn-block"><div class="fn">100</div><div class="fl">Máquinas na frota</div><div class="fd">100% próprias</div></div>
+      <div class="fn-block"><div class="fn">4</div><div class="fl">Estados atendidos</div><div class="fd">MS · GO · MT · SP</div></div>
+      <div class="fn-block"><div class="fn red">47</div><div class="fl">Anos de mercado</div><div class="fd">Desde 1979</div></div>
+      <div class="fn-block"><div class="fn">11</div><div class="fl">Serviços especializados</div><div class="fd">Da supressão ao plantio</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUE FELTRIN -->
+<section id="porque">
+  <div class="container">
+    <div class="r">
+      <div class="sec-label">Por que a Feltrin</div>
+      <h2 class="sec-h2">Seriedade e confiabilidade.<br>Quase 50 anos de evidência.</h2>
+    </div>
+    <div class="pq-grid">
+      <div class="pq-item r" style="transition-delay:.08s">
+        <div class="pq-n">100<sub>%</sub></div>
+        <div class="pq-h">Frota e manutenção próprias</div>
+        <p class="pq-p">Não dependemos de terceiros. Quando a janela de plantio abre, a máquina está pronta e operando.</p>
+      </div>
+      <div class="pq-item r" style="transition-delay:.16s">
+        <div class="pq-n red">47</div>
+        <div class="pq-h">Anos fidelizando clientes</div>
+        <p class="pq-p">Pecuaristas, agricultores, usinas de cana e celulose. Eles voltam porque a Feltrin é boa de negócio.</p>
+      </div>
+      <div class="pq-item r" style="transition-delay:.24s">
+        <div class="pq-n">24<sub>h</sub></div>
+        <div class="pq-h">Resposta em emergências</div>
+        <p class="pq-p">Safra em risco, prazo apertado. Já chegamos com frota completa quando o concorrente falhou no meio do serviço.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+  <div class="container">
+    <div class="contato-inner">
+      <div class="contato-text r">
+        <div class="sec-label">Fale com a Feltrin</div>
+        <h2 class="sec-h2">Orçamento direto.<br>Sem intermediário.</h2>
+        <p class="sec-p">Fale com quem decide. Respondemos em até 2 horas para qualquer ponto de MS, GO, MT ou SP.</p>
+        <p class="contato-tagline">A excelência de quem decide, a agilidade de quem entrega.</p>
+        <div class="wa-tag"><i data-lucide="message-circle"></i>WhatsApp direto</div>
+        <div class="contato-cards">
+          <a href="https://api.whatsapp.com/send?phone=5567984032211&text=Ol%C3%A1%2C+vim+pelo+site+e+quero+um+or%C3%A7amento!" target="_blank" class="contato-card">
+            <div class="contato-card-info">
+              <div class="contato-card-icon"><i data-lucide="user"></i></div>
+              <div><div class="contato-card-name">Diego Feltrin</div><div class="contato-card-num">(67) 9 8403-2211</div></div>
+            </div>
+            <span class="contato-card-btn"><i data-lucide="message-circle"></i>WhatsApp</span>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=5567996254345&text=Ol%C3%A1%2C+vim+pelo+site+e+quero+um+or%C3%A7amento!" target="_blank" class="contato-card">
+            <div class="contato-card-info">
+              <div class="contato-card-icon"><i data-lucide="user"></i></div>
+              <div><div class="contato-card-name">Diogo Feltrin</div><div class="contato-card-num">(67) 9 9625-4345</div></div>
+            </div>
+            <span class="contato-card-btn"><i data-lucide="message-circle"></i>WhatsApp</span>
+          </a>
+        </div>
+      </div>
+      <div class="contato-aside r" style="transition-delay:.12s">
+        <div class="contato-info-block">
+          <h4>Informações</h4>
+          <ul>
+            <li><i data-lucide="map-pin"></i>Campo Grande, MS</li>
+            <li><i data-lucide="clock"></i>Resposta em até 2 horas</li>
+            <li><i data-lucide="map"></i>MS · GO · MT · SP</li>
+            <li class="ig-li">
+              <!-- Instagram SVG inline -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;color:var(--gray);flex-shrink:0"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              <a href="https://www.instagram.com/feltrinmaquinas/" target="_blank">@feltrinmaquinas</a>
+            </li>
+          </ul>
+        </div>
+        <div class="safra-alert">
+          <i data-lucide="calendar-alert"></i>
+          <div class="safra-alert-text">
+            <h4>Safra 2026 · Junho a Dezembro</h4>
+            <p>A maioria contrata em cima da hora e fica sem vaga. <a href="https://api.whatsapp.com/send?phone=5567984032211&text=Ol%C3%A1%2C+quero+garantir+minha+data+na+safra+2026!" target="_blank">Reserve sua data agora.</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="ft">
+  <div class="container">
+    <div class="ft-inner">
+      <div class="ft-brand">
+        <div class="ft-brand-logo">
+          <img src="Logo-feltrin/logo-feltrin.png" alt="Feltrin Máquinas & Transportes" height="32">
+        </div>
+        <p>Quase 50 anos construindo o agro e a infraestrutura do Centro-Oeste.</p>
+        <div class="ft-estados">
+          <span class="ft-estado">MS</span><span class="ft-estado">GO</span>
+          <span class="ft-estado">MT</span><span class="ft-estado">SP</span>
+        </div>
+      </div>
+      <div class="ft-col">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="#servicos">Supressão</a></li>
+          <li><a href="#servicos">Distribuição de Calcário</a></li>
+          <li><a href="#servicos">Terraplanagem</a></li>
+          <li><a href="#servicos">Açudes e Barragens</a></li>
+          <li><a href="#servicos">Locação de Máquinas</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://api.whatsapp.com/send?phone=5567984032211" target="_blank">Diego · (67) 9 8403-2211</a></li>
+          <li><a href="https://api.whatsapp.com/send?phone=5567996254345" target="_blank">Diogo · (67) 9 9625-4345</a></li>
+          <li><a href="https://www.instagram.com/feltrinmaquinas/" target="_blank">@feltrinmaquinas</a></li>
+          <li><a href="#">Campo Grande, MS</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <p>© 2026 Feltrin Máquinas & Transportes · Campo Grande, MS</p>
+      <a href="https://www.actusmidia.com.br" target="_blank">Desenvolvido por Actus Mídia</a>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATS -->
+<a href="https://api.whatsapp.com/send?phone=5567984032211&text=Ol%C3%A1%2C+vim+pelo+site+da+Feltrin!" target="_blank" class="wa-float" aria-label="WhatsApp">
+  <i data-lucide="message-circle"></i>
+</a>
+<a href="https://www.instagram.com/feltrinmaquinas/" target="_blank" class="ig-float" aria-label="Instagram">
+  <!-- Instagram SVG inline -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+</a>
+
+<script>
+// Marquee
+(function(){
+  var items=['Supressão','Distribuição de Calcário','Terraplanagem','Açudes e Barragens','Locação de Máquinas','Gradagem Pesada','Escavações','Curva de Nível','Linque','Plantio','Apoio à Lavoura'];
+  var t=document.getElementById('mTrack');
+  var h='';
+  for(var r=0;r<3;r++){items.forEach(function(i){h+='<div class="m-item"><span class="m-dot"></span>'+i+'</div>';});}
+  t.innerHTML=h;
+})();
+
+// Serviços grid
+(function(){
+  var s=[
+    {i:'axe',     n:'Supressão',               d:'Remoção técnica de vegetação densa. Equipamento exclusivo na região.', d:true},
+    {i:'layers',  n:'Distribuição de Calcário', d:'Correção do solo com caminhão de calcário próprio.', d2:true},
+    {i:'mountain',n:'Terraplanagem',            d:'Nivelamento e preparo de terrenos rurais e urbanos.'},
+    {i:'droplets',n:'Açudes e Barragens',       d:'Reservatórios para abastecimento e irrigação.'},
+    {i:'truck',   n:'Locação de Máquinas',      d:'Equipamentos pesados com operador qualificado.'},
+    {i:'grid-3x3',n:'Gradagem Pesada',          d:'Preparo profundo do solo para plantio.'},
+    {i:'shovel',  n:'Escavações',               d:'Fundações, valas e obras civis.'},
+    {i:'trending-up',n:'Curva de Nível',        d:'Conservação de solo e controle hídrico.'},
+    {i:'link',    n:'Linque',                   d:'Abertura e manutenção de estradas rurais.'},
+    {i:'sprout',  n:'Plantio',                  d:'Apoio mecanizado ao plantio de culturas.'},
+    {i:'wheat',   n:'Apoio à Lavoura',          d:'Suporte completo às operações agrícolas.'}
+  ];
+  // Remontar com propriedade correta
+  var servicos=[
+    {i:'axe',     n:'Supressão',               desc:'Remoção técnica de vegetação densa. Equipamento exclusivo na região.', destaque:true},
+    {i:'layers',  n:'Distribuição de Calcário', desc:'Correção do solo com caminhão de calcário próprio.', destaque:true},
+    {i:'mountain',n:'Terraplanagem',            desc:'Nivelamento e preparo de terrenos rurais e urbanos.'},
+    {i:'droplets',n:'Açudes e Barragens',       desc:'Reservatórios para abastecimento e irrigação.'},
+    {i:'truck',   n:'Locação de Máquinas',      desc:'Equipamentos pesados com operador qualificado.'},
+    {i:'grid-3x3',n:'Gradagem Pesada',          desc:'Preparo profundo do solo para plantio.'},
+    {i:'shovel',  n:'Escavações',               desc:'Fundações, valas e obras civis.'},
+    {i:'trending-up',n:'Curva de Nível',        desc:'Conservação de solo e controle hídrico.'},
+    {i:'link',    n:'Linque',                   desc:'Abertura e manutenção de estradas rurais.'},
+    {i:'sprout',  n:'Plantio',                  desc:'Apoio mecanizado ao plantio de culturas.'},
+    {i:'wheat',   n:'Apoio à Lavoura',          desc:'Suporte completo às operações agrícolas.'}
+  ];
+  var g=document.getElementById('sGrid');
+  var h='';
+  servicos.forEach(function(x,idx){
+    var cls='srv r'+(x.destaque?' destaque':'');
+    h+='<div class="'+cls+'" style="transition-delay:'+(idx*.04)+'s">'
+      +'<div class="srv-top"><div class="srv-icon"><i data-lucide="'+x.i+'"></i></div>'
+      +'<div class="srv-name">'+x.n+'</div></div>'
+      +'<div class="srv-desc">'+x.desc+'</div>'
+      +'</div>';
+  });
+  g.innerHTML=h;
+  g.querySelectorAll('.r').forEach(observe);
+  lucide.createIcons();
+})();
+
+// Reveal
+function observe(el){
+  new IntersectionObserver(function(ee){
+    ee.forEach(function(e){if(e.isIntersecting)e.target.classList.add('on');});
+  },{threshold:.07}).observe(el);
+}
+document.querySelectorAll('.r').forEach(observe);
+
+// Header
+(function(){
+  var hd=document.getElementById('hd');
+  var links=document.querySelectorAll('.hd-nav a');
+  var secs=['servicos','frota','porque','contato'];
+  window.addEventListener('scroll',function(){
+    hd.classList.toggle('scrolled',window.scrollY>40);
+    var cur='';
+    for(var i=secs.length-1;i>=0;i--){
+      var el=document.getElementById(secs[i]);
+      if(el&&el.getBoundingClientRect().top<=160){cur=secs[i];break;}
+    }
+    links.forEach(function(l){l.classList.toggle('on',l.dataset.s===cur);});
+  });
+})();
+
+// Burger
+(function(){
+  var b=document.getElementById('burger');
+  var m=document.getElementById('mobMenu');
+  b.addEventListener('click',function(){b.classList.toggle('on');m.classList.toggle('on');});
+  m.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){b.classList.remove('on');m.classList.remove('on');});
+  });
+})();
+
+lucide.createIcons();
+</script>
+</body>
+</html>
