@@ -19,6 +19,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%231A2B56'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-family='sans-serif' font-weight='900' font-size='52' fill='%23fff'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preload" as="image" href="frota/IMG_9550.jpg">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
@@ -244,9 +245,10 @@ img, video { display: block; max-width: 100%; }
 }
 
 .frota-nums {
-  display: flex; gap: 48px; flex-wrap: wrap;
+  display: flex; gap: 28px; flex-wrap: wrap;
   margin-top: 52px; padding-top: 40px; border-top: 1px solid var(--border);
 }
+@media (min-width: 600px) { .frota-nums { gap: 48px; } }
 .fn-block .fn { font-size: 44px; font-weight: 900; letter-spacing: -.04em; color: var(--blue); line-height: 1; }
 .fn-block .fn.red { color: var(--red); }
 .fn-block .fl { font-size: 13px; font-weight: 700; color: var(--blue); margin-top: 6px; }
@@ -258,9 +260,9 @@ img, video { display: block; max-width: 100%; }
 #porque .sec-h2 { color: #fff; margin-bottom: 56px; max-width: 560px; }
 .pq-grid { display: grid; grid-template-columns: 1fr; gap: 48px; }
 @media (min-width: 700px) { .pq-grid { grid-template-columns: repeat(3,1fr); gap: 0; } }
-.pq-item { padding: 0 36px; }
+.pq-item { padding: 0 20px; }
 @media (min-width: 700px) {
-  .pq-item { border-right: 1px solid rgba(255,255,255,.1); }
+  .pq-item { padding: 0 36px; border-right: 1px solid rgba(255,255,255,.1); }
   .pq-item:first-child { padding-left: 0; }
   .pq-item:last-child { border-right: none; }
 }
@@ -411,7 +413,7 @@ img, video { display: block; max-width: 100%; }
       <!-- IMG_9550: frota no pátio com galpão — melhor formato landscape para o hero -->
       <div class="hero-visual">
         <div class="hero-img-wrap">
-          <img src="frota/IMG_9550.jpg" alt="Frota Feltrin Máquinas no pátio" loading="eager">
+          <img src="frota/IMG_9550.jpg" alt="Frota Feltrin Máquinas no pátio" loading="eager" fetchpriority="high" width="1200" height="900">
           <div class="hero-badge">
             <div class="hero-badge-dot"></div>
             <div>
@@ -455,23 +457,23 @@ img, video { display: block; max-width: 100%; }
     <div class="frota-grid r" style="transition-delay:.1s">
       <!-- Grande à esquerda: escavadeira noturna — mais dramática -->
       <div class="fi fi-1">
-        <img src="frota/IMG_7926.jpg" alt="Escavadeira CAT 320 Feltrin em operação noturna" loading="lazy">
+        <img src="frota/IMG_7926.jpg" alt="Escavadeira CAT 320 Feltrin em operação noturna" loading="lazy" width="900" height="1200">
       </div>
       <!-- Top direita: fila de escavadeiras no pátio -->
       <div class="fi fi-2">
-        <img src="frota/IMG_9549.jpg" alt="Frota de escavadeiras CAT Feltrin" loading="lazy">
+        <img src="frota/IMG_9549.jpg" alt="Frota de escavadeiras CAT Feltrin" loading="lazy" width="1200" height="900">
       </div>
       <!-- Mid direita: pás carregadeiras CASE -->
       <div class="fi fi-3">
-        <img src="frota/IMG_7190.jpg" alt="Pás carregadeiras CASE Feltrin" loading="lazy">
+        <img src="frota/IMG_7190.jpg" alt="Pás carregadeiras CASE Feltrin" loading="lazy" width="1200" height="900">
       </div>
       <!-- Bottom esquerda: caminhão com marca Feltrin -->
       <div class="fi fi-4">
-        <img src="frota/IMG_6994.jpg" alt="Caminhão Mercedes-Benz Feltrin com calcário" loading="lazy">
+        <img src="frota/IMG_6994.jpg" alt="Caminhão Mercedes-Benz Feltrin com calcário" loading="lazy" width="1200" height="900">
       </div>
       <!-- Bottom direita: frota completa no pátio -->
       <div class="fi fi-5">
-        <img src="frota/IMG_9550.jpg" alt="Pátio Feltrin Máquinas com frota completa" loading="lazy">
+        <img src="frota/IMG_9550.jpg" alt="Pátio Feltrin Máquinas com frota completa" loading="lazy" width="1200" height="900">
       </div>
     </div>
 
@@ -626,20 +628,6 @@ img, video { display: block; max-width: 100%; }
 
 // Serviços grid
 (function(){
-  var s=[
-    {i:'axe',     n:'Supressão',               d:'Remoção técnica de vegetação densa. Equipamento exclusivo na região.', d:true},
-    {i:'layers',  n:'Distribuição de Calcário', d:'Correção do solo com caminhão de calcário próprio.', d2:true},
-    {i:'mountain',n:'Terraplanagem',            d:'Nivelamento e preparo de terrenos rurais e urbanos.'},
-    {i:'droplets',n:'Açudes e Barragens',       d:'Reservatórios para abastecimento e irrigação.'},
-    {i:'truck',   n:'Locação de Máquinas',      d:'Equipamentos pesados com operador qualificado.'},
-    {i:'grid-3x3',n:'Gradagem Pesada',          d:'Preparo profundo do solo para plantio.'},
-    {i:'shovel',  n:'Escavações',               d:'Fundações, valas e obras civis.'},
-    {i:'trending-up',n:'Curva de Nível',        d:'Conservação de solo e controle hídrico.'},
-    {i:'link',    n:'Linque',                   d:'Abertura e manutenção de estradas rurais.'},
-    {i:'sprout',  n:'Plantio',                  d:'Apoio mecanizado ao plantio de culturas.'},
-    {i:'wheat',   n:'Apoio à Lavoura',          d:'Suporte completo às operações agrícolas.'}
-  ];
-  // Remontar com propriedade correta
   var servicos=[
     {i:'axe',     n:'Supressão',               desc:'Remoção técnica de vegetação densa. Equipamento exclusivo na região.', destaque:true},
     {i:'layers',  n:'Distribuição de Calcário', desc:'Correção do solo com caminhão de calcário próprio.', destaque:true},
