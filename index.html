@@ -200,16 +200,25 @@ img, video { display: block; max-width: 100%; }
 }
 @media (min-width: 560px) { .servicos-grid { grid-template-columns: repeat(3,1fr); } }
 @media (min-width: 900px) { .servicos-grid { grid-template-columns: repeat(4,1fr); } }
-.srv { background: #fff; padding: 26px 20px; transition: background .2s; display: flex; flex-direction: column; }
-.srv:hover { background: #fafbff; }
+.srv {
+  background: #fff; padding: 26px 20px;
+  transition: background .2s, box-shadow .2s;
+  display: flex; flex-direction: column;
+  cursor: pointer; position: relative;
+  text-decoration: none; color: inherit;
+}
+.srv:hover { background: #f8f9ff; box-shadow: inset 0 0 0 1.5px rgba(26,43,86,.12); }
+.srv-arrow {
+  position: absolute; top: 50%; right: 16px; transform: translateY(-50%);
+  width: 18px; height: 18px; color: var(--border);
+  transition: color .2s, transform .2s; pointer-events: none;
+}
+.srv:hover .srv-arrow { color: var(--blue); transform: translateY(-50%) translateX(2px); }
 .srv-top { display: flex; align-items: center; gap: 10px; margin-bottom: 9px; }
 .srv-icon { width: 34px; height: 34px; border-radius: 9px; background: rgba(26,43,86,.06); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .srv-icon svg { width: 15px; height: 15px; color: var(--blue); }
-.srv-name { font-size: 13px; font-weight: 800; color: var(--blue); line-height: 1.3; }
-.srv-desc { font-size: 11.5px; color: var(--gray); line-height: 1.6; flex: 1; }
-.srv-wa { display: inline-flex; align-items: center; gap: 5px; margin-top: 12px; font-size: 10.5px; font-weight: 700; color: #16a34a; letter-spacing: .03em; transition: color .2s; }
-.srv-wa:hover { color: #15803d; }
-.srv-wa svg { width: 12px; height: 12px; }
+.srv-name { font-size: 13px; font-weight: 800; color: var(--blue); line-height: 1.3; padding-right: 20px; }
+.srv-desc { font-size: 11.5px; color: var(--gray); line-height: 1.6; }
 .srv.destaque { border-left: 3px solid var(--red); }
 .srv.destaque .srv-name { color: var(--red); }
 
@@ -655,17 +664,15 @@ img, video { display: block; max-width: 100%; }
   ];
   var g=document.getElementById('sGrid');
   var h='';
+  var arrowSvg='<svg class="srv-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>';
   servicos.forEach(function(x,idx){
     var cls='srv r'+(x.destaque?' destaque':'');
-    h+='<div class="'+cls+'" style="transition-delay:'+(idx*.04)+'s">'
+    h+='<a href="'+waLink(x.n)+'" target="_blank" class="'+cls+'" style="transition-delay:'+(idx*.04)+'s">'
       +'<div class="srv-top"><div class="srv-icon"><i data-lucide="'+x.i+'"></i></div>'
       +'<div class="srv-name">'+x.n+'</div></div>'
       +'<div class="srv-desc">'+x.desc+'</div>'
-      +'<a href="'+waLink(x.n)+'" target="_blank" class="srv-wa">'
-      +'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.856L0 24l6.335-1.51A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.366l-.36-.214-3.726.888.939-3.618-.235-.372A9.818 9.818 0 0 1 2.182 12C2.182 6.578 6.578 2.182 12 2.182c5.421 0 9.818 4.396 9.818 9.818 0 5.421-4.397 9.818-9.818 9.818z"/></svg>'
-      +'Solicitar orçamento'
-      +'</a>'
-      +'</div>';
+      +arrowSvg
+      +'</a>';
   });
   g.innerHTML=h;
   g.querySelectorAll('.r').forEach(observe);
