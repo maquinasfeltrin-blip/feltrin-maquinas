@@ -207,6 +207,35 @@ img, video { display: block; max-width: 100%; }
 .srv.destaque { border-left: 3px solid var(--red); }
 .srv.destaque .srv-name { color: var(--red); }
 
+/* ══ FAIXA FOTO ══ */
+.foto-strip {
+  position: relative; overflow: hidden;
+  height: 320px;
+}
+@media (min-width: 768px) { .foto-strip { height: 420px; } }
+.foto-strip img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center 60%;
+  display: block; transform: scale(1.04); transition: transform 8s ease;
+}
+.foto-strip:hover img { transform: scale(1); }
+.foto-strip-overlay {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(to right, rgba(10,20,50,.78) 0%, rgba(10,20,50,.45) 60%, rgba(10,20,50,.25) 100%);
+  display: flex; align-items: center; padding: 0 28px;
+}
+@media (min-width: 768px) { .foto-strip-overlay { padding: 0 80px; } }
+.foto-strip-text {
+  max-width: 560px;
+}
+.foto-strip-text p {
+  font-size: clamp(20px, 3vw, 34px); font-weight: 900; line-height: 1.2;
+  color: #fff; letter-spacing: -.02em; margin-bottom: 16px;
+}
+.foto-strip-text span {
+  font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: rgba(255,255,255,.55); border-left: 3px solid var(--red); padding-left: 12px;
+}
+
 /* ══ GALERIA DA FROTA ══ */
 #frota { padding: 100px 0; background: #fff; }
 .frota-header { margin-bottom: 48px; }
@@ -254,7 +283,7 @@ img, video { display: block; max-width: 100%; }
 /* ══ POR QUE FELTRIN ══ */
 #porque {
   padding: 100px 0;
-  background: url('frota/IMG_7926.jpg') center/cover no-repeat;
+  background: url('frota/tracao_terraco.jpg') center/cover no-repeat;
   position: relative;
 }
 #porque::before {
@@ -440,6 +469,17 @@ img, video { display: block; max-width: 100%; }
     <div class="servicos-grid r" id="sGrid" style="transition-delay:.1s"></div>
   </div>
 </section>
+
+<!-- FAIXA FOTO -->
+<div class="foto-strip">
+  <img src="frota/IMG_7190.jpg" alt="Frota de máquinas Feltrin em campo" loading="lazy" width="1200" height="800">
+  <div class="foto-strip-overlay">
+    <div class="foto-strip-text">
+      <p>Frota própria.<br>Manutenção interna.<br>Operadores qualificados.</p>
+      <span>100 máquinas · MS · GO · MT · SP</span>
+    </div>
+  </div>
+</div>
 
 <!-- GALERIA DA FROTA -->
 <section id="frota">
